@@ -2,12 +2,45 @@
 This is a project I've been building with 2 of my friends. Our current goal is autonomous flight, to get the drone to ascend to a certain height, hover for a set time and descend back to the ground. 
 
 
-**Our process:**
-We first started with research, and split the tasks among the 3 of us. I was responsible with learning about how to program the flight controller, my friend's task was learning about the hardware, and my other friend researched about the frame. Through this research we all learned about the parts that we needed and finalized our part selection and size of the drone together. Once we got our parts we began designing a frame to fit all the parts and soldered most the parts together that needed it. The flight controller was also programmed during this time. Once our prototype was assembled we began running smaller programs that were designed to help us gather data about the drone such as the PWM signal we needed to obtain a hover position. This is also where we reached out to a mentor to get advice on our drone on how we could improve it. From here we began a process of trial and error and learned a lot and had to design a new prototype that we are currently working on. This is a very brief summary of out process the next sections describe all the steps in more detail. 
+**Our process(Brief summary):**
+We first started with research, and split the tasks among the 3 of us. I was responsible with learning about how to program the flight controller, my friend's task was learning about the hardware, and my other friend researched about the frame. Through this research we all learned about the parts that we needed and finalized our part selection and size of the drone together. Once we got our parts we began designing a frame to fit all the parts and soldered most the parts together that needed it. The flight controller was also programmed during this time. Once our prototype was assembled we began running smaller programs that were designed to help us gather data about the drone such as the PWM signal we needed to obtain a hover position. This is also where we reached out to a mentor to get advice on our drone on how we could improve it. From here we began a process of trial and error and learned a lot and had to design a new prototype that we are currently working on. This is a very brief summary of our process the next sections describe all the steps in more detail. 
 
 
-**Part selection:**
-The main parts we needed included a Power Distribution Board(PDB), 4 Electronic Speed Controllers(ESCs), 4 brushless motors + mounts, Propellors, LiPo Battery, MPU-6050 Internal Measurement Unit (IMU), ultrasonic sensor, wiring and a Microcontroller (We chose Arduino). Along with these parts there were tools we needed like a Soldering Iron, Multimeter, Legos for our prototype frame, Plywood for our version 2 (V2) frame, hand tools, screws and bolts to build that V2 frame. Our PDB is quite self explanatory but it directly connected to our battery and has our 4 ESCs connected to it along with our Arduino. The PDB takes the full 11.1 volts from our battery and distributes it to our ESCs which will control our motors and with the built in 5 volt regulator on it will send 5 volts to the Arduino. All other electronics and components attach onto this main body of the PDB, ESCs and Arduino. Our ESCs receive PWM signals which will control how much average voltage the motors connected to them will receive, which vary based on the orientation of the drone to keep it level. The Arduino is the brain of the drone and will control all the drones actions. Our LiPo battery is what powers the whole drone. The motors are A2212 1000KV motors which our propellors get attached to. The MPU-6050 IMU is a device with a gyroscope and accelerometer this is used to measure the orientation of the drone. The sonar sensor is used to measure distance and will be specifically mounted on the bottom of the drone to measure height. 
+## Part Selection
+
+### Electronic Components
+- **Arduino Uno R3:** Main flight controller
+- **MPU-6050 IMU:** Accelerometer and gyroscope for measuring orientation and angular velocity
+- **Ultrasonic sensor:** Measures altitude above the ground
+- **Power Distribution Board (PDB):** Distributes battery power to the four ESCs and provides regulated 5V power for the Arduino
+- **4 Electronic Speed Controllers (ESCs):** Control the four brushless motors using signals from the Arduino
+- **4 A2212 1000KV brushless motors:** Generate thrust through the propellers
+- **4 propellers:** 10 × 4.5 inches
+- **11.1V LiPo battery:** Main power source
+- **IR receiver and remote:** Provide a software-controlled motor shutdown
+- **Jumper wires and connectors:** Connect electrical components
+
+### Frame Materials
+- **Prototype 1:** LEGO frame
+- **Prototype 2:** Plywood, screws, and bolts
+
+### Tools
+- Multimeter
+- Soldering iron
+- Hand tools
+
+### Why we choose these parts and their uses
+
+Rather than immediately designing a custom PCB, we chose a modular approach that would allow us to understand, test, and troubleshoot each subsystem of the drone independently, such as its power distribution system using the PDB and orientation and position measurements through the MPU and sonar.
+
+We selected a Power Distribution Board (PDB) with sufficient connections for four ESCs and an integrated 5V regulator to power the Arduino Uno. This allowed us to simplify our power distribution system without requiring a separate voltage regulator.
+
+The Arduino Uno serves as our flight controller, processing measurements from the MPU-6050 IMU and ultrasonic sensor to calculate motor control signals.
+
+The MPU-6050 combines an accelerometer and gyroscope, providing measurements used to estimate the drone's orientation and angular velocity. The ultrasonic sensor measures the distance to the ground, which will be used to manage altitude during autonomous flight.
+
+Four A2212 1000KV brushless motors generate thrust, with each motor controlled by an ESC receiving signals from the Arduino.
+  
 
 <img width="435" height="412" alt="parts" src="https://github.com/user-attachments/assets/d65389ef-8794-4df3-a40d-baefcabfdfa5" />
 
