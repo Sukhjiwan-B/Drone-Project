@@ -83,7 +83,7 @@ We are currently testing and tuning Kp and Kd to achieve a stable response along
 
 ### State Machine&#x20;
 
-In addition to the PD controller, I implemented a finite state machine to manage the drone's autonomous flight sequence.
+In addition to the PD controller, I implemented a state machine to manage the drone's autonomous flight sequence.
 
 It consists of five states:
 
