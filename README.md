@@ -97,7 +97,7 @@ The ultrasonic sensor measures the drone's height above the ground, allowing the
 Our goal is for the state machine and feedback controller to work together to achieve autonomous takeoff, hovering, and landing once the control system has been properly tuned and tested.
 
 
-**code:** [Uploading motor_esc_mputest.ino…]()
+**code:** 
 
 
 ## Hardware
