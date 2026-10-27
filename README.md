@@ -2,6 +2,7 @@
 This is a project I've been building with 2 of my friends. Our current goal is autonomous flight, to get the drone to ascend to a certain height, hover for a set time and descend back to the ground. 
 
 
+
 ## Our Process (Brief Summary)
 
 We began by researching the requirements for building an autonomous quadcopter and dividing responsibilities among our three team members. I focused on developing the flight controller software, while my friends researched the electronics and frame design. We then collaborated to finalize our component selection and the drone's dimensions.
@@ -96,7 +97,8 @@ The ultrasonic sensor measures the drone's height above the ground, allowing the
 Our goal is for the state machine and feedback controller to work together to achieve autonomous takeoff, hovering, and landing once the control system has been properly tuned and tested.
 
 
-**code:**
+**code:** [Uploading motor_esc_mputest.ino…]()
+
 
 ## Hardware
 
@@ -104,7 +106,10 @@ Our goal is for the state machine and feedback controller to work together to ac
 
 Our drone uses a Power Distribution Board (PDB) to distribute power from an 11.1V LiPo battery to four Electronic Speed Controllers (ESCs). Each ESC supplies three-phase power to its respective brushless motor, controlling its speed based on signals received from the Arduino.
 
-The PDB also includes a 5V voltage regulator, which provides a regulated power supply for the Arduino. This allows us to power the control electronics separately from the higher-voltage motor supply.
+The PDB also includes a 5V voltage regulator, which allows us to connect the Arduino to the PDB safely with out damaging it. This allows us to power the control electronics separately from the higher-voltage motor supply as these electronics receive their power from the Arduino.
+
+<img width="3024" height="4032" alt="hardware" src="https://github.com/user-attachments/assets/c19a61a3-3763-456a-83ad-85e2bc3cdf1a" />
+
 
 ### Microcontroller and Sensors
 
