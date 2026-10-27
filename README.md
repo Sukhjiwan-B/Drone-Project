@@ -50,9 +50,6 @@ Four A2212 1000KV brushless motors generate thrust, with each motor controlled b
   
 <img width="1170" height="1408" alt="parts" src="https://github.com/user-attachments/assets/b567ac19-3100-4677-8b7a-43665f514507" />
 
-<img width="435" height="412" alt="parts" src="https://github.com/user-attachments/assets/d65389ef-8794-4df3-a40d-baefcabfdfa5" />
-
-
 
 ## Programming
 
@@ -99,8 +96,7 @@ The ultrasonic sensor measures the drone's height above the ground, allowing the
 Our goal is for the state machine and feedback controller to work together to achieve autonomous takeoff, hovering, and landing once the control system has been properly tuned and tested.
 
 
-**code:**<img width="3024" height="4032" alt="hardware" src="https://github.com/user-attachments/assets/c70d1c40-9cac-4a19-b112-7bfb4d8e872c" />
-
+**code:**
 
 ## Hardware
 
@@ -130,11 +126,9 @@ We replaced the breadboard connections with **WAGO lever connectors** (the orang
 
 
 <img width="700" height="782" alt="hardware" src="https://github.com/user-attachments/assets/b1ff0da9-9211-4cbb-8e39-f613146da55e" />
-<img width="3024" height="4032" alt="hardware" src="https://github.com/user-attachments/assets/5a1da935-20c4-47cb-a1c9-4c336d5b7238" />
 
 
-
-**Frame design:**
+## Frame design
 We have had two prototypes for our drone. Our initial idea was a 3D printed PLA frame suggested and designed by my friend as mentioned in the first summary, however we did not have access to a 3D printer so we had to improvise with common materials we had. The first frame I made was with extra Legos; we had made measurements about how large the center body had to be to fit all the components, this came out to 15X15cm. We also determined how long the arms would have to be to stop our 10(diameter inches)x4.5(pitch inches) propellors from hitting each other, our first design had the motors (also the center placement of the propellors) 19cm away from the body. Which was a generous amount of extra space. This frame was built and went through multiple tests unitl it broke. Our second frame was more compact and had the motors only 14cm away from the body which reduced the torque experienced at the connection joint, this frame was also made of plywood and used screws and bolts to put everything together. This frame is much stronger and has held up to all tests. One other thing I've implemented is attaching the power distribution system to the underside of the drone to open up more space on top for the electronics, Arduino and battery. 
 
 
@@ -142,7 +136,7 @@ We have had two prototypes for our drone. Our initial idea was a 3D printed PLA 
 <img width="2956" height="3546" alt="droneframe" src="https://github.com/user-attachments/assets/b0a6fcee-5858-49e4-96c7-4b7cc19e4e01" />
 <img width="1170" height="1199" alt="PDBSYSTEM" src="https://github.com/user-attachments/assets/ffdfdac0-8d11-4010-bab9-d41d8868507d" />
 
-**Mentor Advice:**
+## Mentor Advice
 Once we were ready for running some tests to gather data about the drone we first went to a mentor I had met through the UBC mentorship program to ask for advice on our drone. What he had strongly recommended to us was to design a kill switch as well just incase anything ever went wrong in testing, and to make a physical switch that can turn the drone on and off rather then having to remove the battery connection every time as it can be quite a hassle, and even damage components. We were glad we talked to him before testing, with propellors on, and grateful for his advice. As it did end up saving us a couple times. The kill switch was installed right away. It was a software kill switch that involved an IR receiver and remote I had lying around in an electronics kit. The IR receiver would constantly check if the remote power button had been clicked every loop, and once clicked would send the motors to their minimum throttle(off) right away, and no other code would run again until the program was restarted. Allowing us to safely handle the drone and disconnect power with out worrying about the propellors spinning. The power switch we are still designing and finding a way to incorporate. 
 
 
