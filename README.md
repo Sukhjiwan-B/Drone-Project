@@ -1,6 +1,7 @@
 # Drone-Project
 This is a project I've been building with 2 of my friends. Our current goal is autonomous flight, to get the drone to ascend to a certain height, hover for a set time and descend back to the ground. 
 
+<img width="641" height="605" alt="coverdrone" src="https://github.com/user-attachments/assets/bf6d09e1-e5cc-4ba2-9825-37faf3e9adaa" />
 
 
 ## Our Process (Brief Summary)
@@ -95,9 +96,6 @@ It consists of five states:
 The ultrasonic sensor measures the drone's height above the ground, allowing the controller to use altitude measurements to determine when certain state transitions should occur.
 
 Our goal is for the state machine and feedback controller to work together to achieve autonomous takeoff, hovering, and landing once the control system has been properly tuned and tested.
-
-
-**code:** 
 
 
 ## Hardware
