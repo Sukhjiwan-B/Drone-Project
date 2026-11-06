@@ -3,6 +3,13 @@ This is a project I've been building with 2 of my friends. Our current goal is a
 
 <img width="641" height="605" alt="coverdrone" src="https://github.com/user-attachments/assets/bf6d09e1-e5cc-4ba2-9825-37faf3e9adaa" />
 
+**Explore the project:**
+- [Part Selection](#Part-Selection)
+- [Programming](#Programming)
+- [Hardware](#Hardware)
+- [Mentor Advice](#Mentor-Advice)
+- [Prototyping and Testing](#prototyping-and-testing)
+
 
 ## Our Process (Brief Summary)
 
